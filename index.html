@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/bookmark.png">
+    <title>Bookmark</title>
+    <base href="./index.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <meta name="description" content="Bookmark">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- sweat alret -->
+    <script src="./js/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+    <section class="main-bg min-vh-100 pb-5">
+        <div class="container pt-5 m-auto text-center">
+            <h1 class="fontF-Pacifico m-auto layer-back position-relative d-inline-block mb-5">Bookmarker</h1>
+            <div class="py-4 border-style needs-validation" novalidate>
+                <h2 class="d-flex align-items-center justify-content-center fontF-Righteous fs-4 mb-5">
+                    <div class="icon-style"><i class="fa-solid fa-bookmark"></i></div>Bookmark your favorite sites<div
+                        class="icon-style"><i class="fa-solid fa-bookmark"></i></div>
+                </h2>
+                <div class="fontF-PT-Sans-Caption text-start">
+                    <label for="sName" class="fw-bold mb-2"><i class="fa-solid fa-book-bookmark pe-2"></i>Site
+                        Name</label>
+                    <input type="text" name="siteName" id="sName" class="form-control mb-4 input"
+                        placeholder="Bookmark Name" required onkeyup="">
+                    <label for="sUrl" class="fw-bold mb-2"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input type="url" name="siteUrl" id="sUrl" class="form-control input" placeholder="Website URL"
+                        required>
+                    <button class="btn rounded px-5 py-1 d-block m-auto mt-4" id="add" onclick="run()">Sumbit</button>
+                </div>
+            </div>
+            <table class="table mt-4 mb-0 pb-5">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="innerDataTable" class="fw-semibold">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <template id="message-1">
+        <swal-title>
+            <div class="d-flex row text-dark text-start">
+                <div class="d-flex p-1">
+                    <span class="rounded-circle icon-style ms-1"
+                        style="width: 20px;height: 20px; background-color: #f15f5d;"></span>
+                    <span class="rounded-circle icon-style ms-1"
+                        style="width: 20px;height: 20px; background-color: #febe2e;"></span>
+                    <span class="rounded-circle icon-style ms-1"
+                        style="width: 20px;height: 20px; background-color: #4db748;"></span>
+                </div>
+                <h3 class="fs-5 pt-2 ">Site Name or Url is not valid, Please follow the rules below :</h3>
+                <p class=" fs-5 fw-normal text-muted"><i class="fa-solid fa-arrow-right pe-2"></i>Site name must contain at least 3 characters</p>
+                <p class=" fs-5 fw-normal text-muted"><i class="fa-solid fa-arrow-right pe-2"></i>Site URL must be a valid one</p>
+        </swal-title>
+        </div>
+    </template>
+    <template id="message-2">
+        <swal-title>
+            <div class="d-flex row text-dark text-start">
+                <div class="d-flex p-1">
+                    <span class="rounded-circle icon-style ms-1"
+                        style="width: 20px;height: 20px; background-color: #f15f5d;"></span>
+                    <span class="rounded-circle icon-style ms-1"
+                        style="width: 20px;height: 20px; background-color: #febe2e;"></span>
+                    <span class="rounded-circle icon-style ms-1"
+                        style="width: 20px;height: 20px; background-color: #4db748;"></span>
+                </div>
+                <h3 class="fs-5 pt-2 ">Bookmark name has been used before</h3>
+                <p class=" fs-5 fw-normal text-muted"><i class="fa-solid fa-arrow-right pe-2"></i>Please add a new one</p>
+        </swal-title>
+        </div>
+    </template>
+    <!-- main js -->
+    <script src="./js/script.js"></script>
+    <!-- bootstrap js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
