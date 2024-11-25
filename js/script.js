@@ -53,7 +53,7 @@ function deleteBM(index) {
 
 function openUrl(index) {
     let urlvalue=data[index].url;
-    const regex = /(https?:\/\/)/;
+    const regex = /(https?:\/\/|http?:\/\/)/gi;
     if(!regex.test(urlvalue))
     {
         urlvalue="https://"+urlvalue;
