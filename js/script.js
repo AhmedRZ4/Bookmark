@@ -95,7 +95,7 @@ sNameI.addEventListener('keyup', () => {
     }
 });
 sUrlI.addEventListener('keyup', () => {
-    const regex = /^(https?:\/\/)?([\w\-]+\.)+[\w\-]+(\/[\w\-._~:/?#[\]@!$&'()*+,;=]*)?$/i;
+    const regex = /^(https?:\/\/)?([\w]{3,}\.[\D]{1,})[\w\-]+(\/[\w\-._~:/?#[\]@!$&'()*+,;=]*)?$/i;
     if (!regex.test(sUrlI.value)) {
         sUrlI.setCustomValidity('Must be greater than 3 characters and contain a "." followed by at least 2 characters.');
         sUrlI.classList.add('is-invalid');
