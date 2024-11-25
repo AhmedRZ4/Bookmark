@@ -64,7 +64,9 @@ body{
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+h2::selection{
+    -webkit-text-fill-color: #352e28;
+}
 .icon-style {
     height: 30px;
     width: 30px;
