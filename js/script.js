@@ -106,6 +106,11 @@ sUrlI.addEventListener('keyup', () => {
         sUrlI.classList.remove('is-invalid');
     }
 });
+sUrlI.addEventListener('keyup',(event)=>{
+    if(event.key=="Enter"){
+        run();
+    }
+})
 let customMassage=`
  <template id="my-template">
         <swal-title>
